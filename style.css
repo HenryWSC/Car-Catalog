@@ -42,7 +42,7 @@
   
   .slider-wrapper {
     position: relative;
-    width: 48rem;
+    width: 116rem;
     margin: 0, auto;
     overflow: hidden;
   }
@@ -50,7 +50,7 @@
   /* how image slider behaves*/
   .slider {
     display: flex;
-    aspect-ratio: 16/9;
+    aspect-ratio: 20/13;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;

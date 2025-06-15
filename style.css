@@ -10,6 +10,7 @@ body{
   max-width: 450px;
   position: fixed;
   top: 0;
+  z-index: 1000;
   right: -450px;
   display: flex;
   flex-direction: column;
@@ -34,6 +35,8 @@ nav {
   width: 50px;
   margin-left: auto;
   position: relative;
+  z-index: 1001;
+
 }
 
 .ham-menu span {
@@ -139,3 +142,8 @@ nav {
     display: flex;
   }
 
+  /* sticky*/
+  .sticky {
+    position: sticky;
+    top: 0;
+  }

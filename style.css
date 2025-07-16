@@ -30,6 +30,7 @@ nav {
   background-color: black;
   z-index: 99999998;
   top: 0;
+  position: sticky;
   
 }
 
@@ -40,7 +41,6 @@ nav {
   position: relative;
   z-index: 99999999;
   top: 0;
-
 }
 
 .ham-menu span {

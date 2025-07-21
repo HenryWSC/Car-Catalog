@@ -125,12 +125,13 @@ nav {
   }
 /* how the dots under the image slider look */
   .slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+    border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  
+  padding: 3px;
+   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
   }
 /* dots go to max opacity when cursor hovering over them */
   .slider-nav a:hover {

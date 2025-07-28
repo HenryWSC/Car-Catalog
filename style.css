@@ -10,7 +10,7 @@ body{
   max-width: 450px;
   position: fixed;
   top: 0;
-  right: -450px;
+  right: -450px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,9 +123,16 @@ nav {
     transform: translate(-50%);
     z-index: 1;
   }
+
+  #slide-3 {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+  }
+  
 /* how the dots under the image slider look */
   .slider-nav a{
-    border: solid black;
+    border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   

@@ -113,7 +113,7 @@ nav {
     scroll-snap-align: start;
     object-fit: cover;
   }
-/* postition of dots under the image slider */
+/* postition of arrows under the image slider */
   .slider-nav {
     display: flex;
     column-gap: 1rem;
@@ -124,7 +124,10 @@ nav {
     z-index: 1;
   }
 
-  #slide-3 {
+  /* info slides size */
+ 
+
+  #Slide-3 {
     position: absolute;
     right: 0%;
     top: 50%;
@@ -139,8 +142,7 @@ nav {
   padding: 3px;
    transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-
-  position: fixed left 50%; }
+}
 /* dots go to max opacity when cursor hovering over them */
   .slider-nav a:hover {
     opacity: 1;
@@ -159,11 +161,4 @@ nav {
   .sticky {
     position: sticky;
     top: 0;
-  }
-
-  .suzuki_swift_info_page_v2.png{
-    width: 100%;
-    height: 200%;
-    object-fit: cover;
-    scroll-snap-align: center;
   }

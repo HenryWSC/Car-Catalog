@@ -113,7 +113,17 @@ nav {
     scroll-snap-align: start;
     object-fit: cover;
   }
-/* postition of arrows under the image slider */
+
+  .car-info{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+/* postition of dots under the image slider */
   .slider-nav {
     display: flex;
     column-gap: 1rem;
@@ -135,7 +145,7 @@ nav {
   
 /* how the dots under the image slider look */
   .slider-nav a{
-    border: solid white;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   

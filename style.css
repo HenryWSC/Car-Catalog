@@ -7,7 +7,7 @@ body{
   background-color: darkred;
   height: 100vh;
   width: 100%;
-  max-width: 450px; 
+  max-width: 450px;
   position: fixed;
   top: 0;
   right: -450px; 
@@ -93,7 +93,7 @@ nav {
   /* how image slider behaves*/
   .slider {
     display: flex;
-    aspect-ratio: fit-content;
+    aspect-ratio: 20/13;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -142,7 +142,11 @@ nav {
   padding: 3px;
    transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> parent of 6251e1e (added info page for suzuki swift)
 /* dots go to max opacity when cursor hovering over them */
   .slider-nav a:hover {
     opacity: 1;

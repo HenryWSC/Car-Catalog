@@ -126,7 +126,7 @@ nav {
 /* postition of dots under the image slider */
   .slider-nav {
   left: 50%;
-  top: 50%;
+  top: 100%;
   padding: 3px;
    transform: rotate(-45deg);
   -webkit-transform: rotate(0deg);
@@ -134,14 +134,37 @@ nav {
   z-index: 99999999;
   }
 
-  /* info slides size */
+  .slide-1{
+  left: 75%;
+  top: 50%;
+  padding: 3px;
+   transform: rotate(-45deg);
+  -webkit-transform: rotate(0deg);
+  position: absolute;
+  z-index: 99999999;
+  }
+  
+
+.suzuki-left{
+  left: 25%;
+  top: 50%;
+  padding: 3px;
+   transform: rotate(-45deg);
+  -webkit-transform: rotate(0deg);
+  position: absolute;
+  z-index: 99999999;
+  }
+.suzuki-right{
+  left: 25%;
+  top: 50%;
+  padding: 3px;
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(0deg);
+  position: absolute;
+  z-index: 99999999;
+}
  
 
-  #Slide-3 {
-    position: absolute;
-    right: 0%;
-    top: 50%;
-  }
   
 /* how the dots under the image slider look */
   .slider-nav a{

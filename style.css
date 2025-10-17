@@ -2,65 +2,6 @@ body, html {
   scroll-behavior: smooth;
 }
 
-
-/* postition of dots under the image slider */
-  .slider-nav {
-  left: 50%;
-  top: 100%;
-  padding: 3px;
-   transform: rotate(-45deg);
-  -webkit-transform: rotate(0deg);
-  position: absolute;
-  z-index: 99999999;
-  }
-
-  .slide-1{
-  left: 75%;
-  top: 50%;
-  padding: 3px;
-   transform: rotate(-45deg);
-  -webkit-transform: rotate(0deg);
-  position: absolute;
-  z-index: 99999999;
-  }
-  
-
-.suzuki-left{
-  left: 25%;
-  top: 50%;
-  padding: 3px;
-   transform: rotate(-45deg);
-  -webkit-transform: rotate(0deg);
-  position: absolute;
-  z-index: 99999999;
-  }
-.suzuki-right{
-  left: 25%;
-  top: 50%;
-  padding: 3px;
-   transform: rotate(-45deg);
-   -webkit-transform: rotate(0deg);
-  position: absolute;
-  z-index: 99999999;
-}
- 
-
-  
-/* how the dots under the image slider look */
-  .slider-nav a{
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  
-  padding: 3px;
-   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-/* dots go to max opacity when cursor hovering over them */
-  .slider-nav a:hover {
-    opacity: 1;
-  }
-
   #Home-Page-Bg {
     background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     background-size: cover;
@@ -102,6 +43,8 @@ body, html {
 
 .btn:hover {
     background-color: #0056b3;
+    border-style: solid;
+    border-color: yellow;
 }
 
 /* Quiz Page */
@@ -109,12 +52,26 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .hidden {
     display: none;
 }
-
+.answer-buttons-container {
+    width: 300px; 
+    height: 265px; 
+    background-color: lightblue; 
+    border: 2px solid darkblue; 
+    padding: 20px; 
+    margin: 10px auto; 
+    border-radius: 8px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    font-family: sans-serif; 
+    z-index: auto;
+    display: block; /* Ensure the container is visible */
+}
 .answer-buttons {
     display: flex;
     flex-direction: column;
@@ -166,8 +123,8 @@ nav {
   background-color: black;
   z-index: 99999998;
   top: 0;
-  position: sticky;
-  
+  right: 0;
+  position: sticky;  
 }
 
 .ham-menu {

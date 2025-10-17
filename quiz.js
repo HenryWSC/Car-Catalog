@@ -10,30 +10,30 @@ let score = 0;
 
 const questions = [
     {
-        question: "What is the capital of France?",
+        question: "You notice smoke coming from the exhaust that is blue, what does this usually indicate?",
         answers: [
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false },
-            { text: "Paris", correct: true },
-            { text: "Rome", correct: false },
+            { text: "Overheating engine", correct: false },
+            { text: "Too much fuel", correct: false },
+            { text: "Burning oil", correct: true },
+            { text: "Water in the exhaust", correct: false },
         ]
     },
     {
-        question: "Which planet is known as the Red Planet?",
+        question: "You turn the key and the engine doesn't start you only hear a clicking noise, what's the most likely cause?",
         answers: [
-            { text: "Earth", correct: false },
-            { text: "Mars", correct: true },
-            { text: "Jupiter", correct: false },
-            { text: "Venus", correct: false },
+            { text: "Flat tire", correct: false },
+            { text: "Dead battery", correct: true },
+            { text: "Faulty spark plug", correct: false },
+            { text: "Empty fuel tank", correct: false },
         ]
     },
     {
-        question: "What is the largest ocean on Earth?",
+        question: "When braking, you feel a vibration or pulsing through the brake pedal.",
         answers: [
-            { text: "Atlantic Ocean", correct: false },
-            { text: "Indian Ocean", correct: false },
-            { text: "Pacific Ocean", correct: true },
-            { text: "Arctic Ocean", correct: false },
+            { text: "Worn brake pads", correct: false },
+            { text: "Low brake fluid", correct: false },
+            { text: "Warped brake rotors", correct: true },
+            { text: "Loose wheel nuts", correct: false },
         ]
     }
 ];
@@ -48,11 +48,15 @@ startButton.addEventListener("click", () => {
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    nextButton.innerText = "Next";
     nextButton.classList.add("hidden");
+    // If the Restart listener is attached, remove it so Next will use the main handler
+    nextButton.removeEventListener("click", startQuiz);
+    // Ensure the next handler is attached exactly once
+    nextButton.removeEventListener("click", handleNext);
+    nextButton.addEventListener("click", handleNext);
     showQuestion();
-    startQuiz.addEventListener("click", function() {
-        console.log("click!");
-})}
+}
 
 function showQuestion() {
     resetState();
@@ -98,22 +102,27 @@ function selectAnswer(e) {
     nextButton.classList.remove("hidden");
 }
 
-nextButton.addEventListener("click", () => {
+// Named handler so we can add/remove it to avoid 
+function handleNext() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
         showScore();
     }
-});
+}
+
+// Attach the next handler initially
+nextButton.addEventListener("click", handleNext);
 
 function showScore() {
     resetState();
     questionElement.innerText = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerText = "Restart";
     nextButton.classList.remove("hidden");
+    // Switch the button to restart mode: remove the next handler and ensure restart is the only listener
+    nextButton.removeEventListener("click", handleNext);
+    // Prevent duplicate restart listeners
+    nextButton.removeEventListener("click", startQuiz);
     nextButton.addEventListener("click", startQuiz);
 }
-
-
-

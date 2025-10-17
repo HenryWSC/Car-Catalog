@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="javascript.js"></script>
     <title>Quiz</title>
 </head>
 <body>
-    <div class="quiz-container">
+    
+    <!-- side-nav start -->
+<div class="off-screen-menu">
+  <ul>
+    <li><a href="Index.html">Home</a></li>
+    <li><a href="Index.html#suzuki">Suzuki Swift</a></li>
+    <li><a href="Index.html#toyota">Toyota</a></li>
+    <li><a href="Index.html#mitsubishi">Mitsubishi</a></li>
+  </ul>
+</div> 
+
+<nav>
+  <div class="ham-menu">
+    <span></span>
+    <span></span>
+    <span></span> 
+  </div>
+</nav>
+            <!-- Quiz -->
+    <div id ="quiz-container">
         <!-- Start Page -->
         <div id="start-page" class="start-page">
             <h1>Welcome to the Quiz!</h1>
@@ -17,9 +37,12 @@
         <!-- Quiz Page -->
         <div id="quiz-page" class="quiz hidden">
             <h2 id="question">Question will appear here</h2>
-            <div id="answer-buttons" class="answer-buttons">
+            <div id="answer-buttons-container" class="answer-buttons-container">
+                <div id="answer-buttons" class="answer-buttons">
                 <!-- Buttons will be dynamically added here -->
-            </div>
+    </div>
+</div>
+            
             <button id="next-btn" class="btn hidden">Next</button>
         </div>
     </div>

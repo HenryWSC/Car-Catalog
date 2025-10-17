@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel ="stylesheet" href="style.css">
-    <title>testing!</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
 </head>
 <body>
-<div class = "quiz-container">
-    <h1>Quiz</h1>
-    <div class = "quiz">
-        <h2 id = "question"> question here</h2>
-        <div id="awnser-buttons">
-            <button class="btn">Awnser 1</button>
-            <button class="btn">Awnser 2</button>
-            <button class="btn">Awnser 3</button>
-            <button class="btn">Awnser 4</button>
-        </div>
-        <button id="next">next</button>
+    <div class="quiz-container">
+        <!-- Start Page -->
+        <div id="start-page" class="start-page">
+            <h1>Welcome to the Quiz!</h1>
+            <button id="start-btn" class="btn">Start Quiz</button>
         </div>
 
-    
-</div>
-
-    
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="quiz hidden">
+            <h2 id="question">Question will appear here</h2>
+            <div id="answer-buttons" class="answer-buttons">
+                <!-- Buttons will be dynamically added here -->
+            </div>
+            <button id="next-btn" class="btn hidden">Next</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
 </body>
 </html>

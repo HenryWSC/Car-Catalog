@@ -102,7 +102,7 @@ function selectAnswer(e) {
     nextButton.classList.remove("hidden");
 }
 
-// Named handler so we can add/remove it to avoid 
+// Named handler so we can add/remove it to avoid   
 function handleNext() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {

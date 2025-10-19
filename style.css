@@ -44,7 +44,7 @@ body, html {
 .btn:hover {
     background-color: #0056b3;
     border-style: solid;
-    border-color: yellow;
+    border-color: rgb(0, 0, 0);
 }
 
 /* Quiz Page */
@@ -97,7 +97,7 @@ body, html {
 
 /* start of side-navbar */
 .off-screen-menu  {
-  background-color: darkred;
+  background-color: rgb(107, 99, 99);
   height: 100vh;
   width: 100%;
   max-width: 450px;
@@ -139,7 +139,7 @@ nav {
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: blue;
+  background-color: white;
   border-radius: 25px;
   position: absolute;
   top: 50%;
